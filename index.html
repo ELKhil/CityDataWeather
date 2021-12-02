@@ -10,13 +10,68 @@
 </head>
 <body>
     <h1>City Data Weather</h1>
+    <div class="principal"></div>
+        <div classe="meteoActuel">
+            <aside class="bloc1">
+                <h2>bloc1</h2>
+                <input id= "nomVille" type="text" value ="Paris" placeholder="Veuillez entrer le nom de la ville (Paris)"/>
+                <input type="button" value="Go!" onclick="buttonClickGet()"/>
+                <dl>
+                    <dt>La température actuelle est de :</dt>
+                    <dd id="temp"></dd>
+                    <dt>La température minimum est de :</dt>
+                    <dd id="tempMin"></dd>
+                    <dt>La température maximum est de :</dt>
+                    <dd id="tempMax"></dd>
+                    <dt>Le taux d'humidité est de :</dt>
+                    <dd id="hum"></dd> 
+                    <dt>La vitesse du vent est de :</dt>
+                    <dd id="vent"></dd> 
+                    <dt>La valeur de pression est de :</dt>
+                    <dd id="press"></dd> 
+                </dl>
+            </aside>
+        </div>
+        <div class="previsions">
+            <aside class="bloc1">
+                <h2>bloc2</h2>
+                <input type="button" value="Les précipitation d'aujourd'hui" onclick="button2ClickGet()"/>
+                 <h3>Les précipitation d'aujourd'hui</h3>
+                <dl>
+                    <dt class="date3H"></dt>
+                    <dd class= "pluie"></dd>
+                    <img class="icon"/>
+                </dl>
+                <h2>bloc3</h2>
+                <input type="button" value="Les précipitation de demain" onclick="button3ClickGet()"/>
+                 <h3>Les précipitation de demain</h3>
+                <dl>
+                    <dt class="date4H"></dt>
+                    <dd class= "pluie2"></dd>
+                    <img class="icon2"/>
+                </dl>
+
+                
+            </aside>
+
+
+
+
+        </div>
+
+
+
+
+
+    </div>
+
     
-    <input id= "nomVille" type="text" value="Paris"/>
-    <input type="button" value="Entrer" onclick="buttonClickGet()"/>
-    <p>La température est de : </p>
-    <p id="temp"></p>
-    <p>L'humidité est de :</p>
-    <p id="hum"></p>
+
+
+
+
+
+    
     
 
 </body>
