@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  color: black;
+  font-family: 'Droid serif', serif;
+  font-size: 55px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 44px;
+  text-align: center;
+}
+
+legend {
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  color: black;
+  font-size: 25px;
+  border-radius: 15px;
+}
+
+.principale {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 100px 40px 40px 40px;
+}
+
+.prev01 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.prevision0 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: green;
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+  margin-right: 25px;
+}
+
+.prevision0 fieldset {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border-radius: 30px;
+  background-color: burlywood;
+}
+
+.prevision0 fieldset legend {
+  background-color: burlywood;
+}
+
+.ville input {
+  color: black;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+  padding-left: 60px;
+  width: 350px;
+  border-radius: 30px;
+  font-size: 17px;
+}
+
+.entrer {
+  border-radius: 30px;
+  width: 300px;
+  color: black;
+  margin-left: 80px;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.b {
+  border-radius: 30px;
+  width: 400px;
+  color: black;
+  margin-left: 80px;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 17px;
+}
+
+.b:hover {
+  cursor: pointer;
+  background-color: brown;
+  color: white;
+}
+
+dl dd {
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 2px;
+  color: black;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 22px;
+}
+
+.informations {
+  padding-left: 400px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: black;
+}
+
+.prevision1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: blue;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.prevision1 fieldset {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border-radius: 30px;
+  background-color: cornflowerblue;
+}
+
+.prevision1 fieldset legend {
+  background-color: cornflowerblue;
+}
+
+.prevision1 fieldset .today {
+  padding-right: 100px;
+  padding-top: 7px;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 22px;
+  display: none;
+}
+
+.prevision1 fieldset .show {
+  display: block;
+}
+
+.prevision1 .preci {
+  color: red;
+  margin-bottom: 15px;
+  padding-left: 60px;
+  margin-top: 10px;
+  margin-right: 50px;
+}
+
+.prevision1 .date3H, .prevision1 .pluie, .prevision1 .icon {
+  margin-left: 80px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.prev23 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 100px;
+}
+
+.prevision2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: blue;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  margin-right: 25px;
+}
+
+.prevision2 fieldset {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border-radius: 30px;
+  background-color: gold;
+}
+
+.prevision2 fieldset legend {
+  background-color: gold;
+}
+
+.prevision2 fieldset .tomorrow {
+  padding-right: 100px;
+  padding-top: 7px;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 22px;
+  display: none;
+}
+
+.prevision2 fieldset .show {
+  display: block;
+}
+
+.preci {
+  color: red;
+  margin-bottom: 15px;
+  padding-left: 60px;
+  margin-top: 10px;
+  margin-right: 50px;
+}
+
+.date4H, .pluie2, .icon2 {
+  margin-left: 80px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.prevision3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: blue;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+.prevision3 fieldset {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border-radius: 30px;
+  background-color: #d9cce6;
+}
+
+.prevision3 fieldset legend {
+  background-color: #d9cce6;
+}
+
+.prevision3 fieldset .totomorrow {
+  padding-right: 100px;
+  padding-top: 7px;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 22px;
+  display: none;
+}
+
+.prevision3 fieldset .show {
+  display: block;
+}
+
+.prevision3 .preci {
+  color: red;
+  margin-bottom: 15px;
+  padding-left: 60px;
+  margin-top: 10px;
+  margin-right: 50px;
+}
+
+.prevision3 .date5H, .prevision3 .pluie3, .prevision3 .icon3 {
+  margin-left: 80px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+/*# sourceMappingURL=styles.css.map */

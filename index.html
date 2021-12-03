@@ -4,75 +4,101 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="./styles/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="script.js"></script>
+    
+    
     <title>Document</title>
 </head>
 <body>
     <h1>City Data Weather</h1>
-    <div class="principal"></div>
-        <div classe="meteoActuel">
-            <aside class="bloc1">
-                <h2>bloc1</h2>
-                <input id= "nomVille" type="text" value ="Paris" placeholder="Veuillez entrer le nom de la ville (Paris)"/>
-                <input type="button" value="Go!" onclick="buttonClickGet()"/>
-                <dl>
-                    <dt>La température actuelle est de :</dt>
-                    <dd id="temp"></dd>
-                    <dt>La température minimum est de :</dt>
-                    <dd id="tempMin"></dd>
-                    <dt>La température maximum est de :</dt>
-                    <dd id="tempMax"></dd>
-                    <dt>Le taux d'humidité est de :</dt>
-                    <dd id="hum"></dd> 
-                    <dt>La vitesse du vent est de :</dt>
-                    <dd id="vent"></dd> 
-                    <dt>La valeur de pression est de :</dt>
-                    <dd id="press"></dd> 
-                </dl>
-            </aside>
+     <div class="principale">
+         <div class="prev01">
+        <div class="prevision0">
+                <fieldset>
+                    <legend>City weather</legend>
+                    <div class="ville">
+                        <input class="entrer" id= "nomVille" type="text" placeholder="Veuillez entrer le nom de la ville..."/>
+                        <input class="b"type="button" value="Go!" onclick="buttonClickGet()"/>
+                    </div>
+                    
+                    <div class="informations">
+                        <dl>
+                            <dd class="cityName"></dd>
+                            <br>
+                            <dd id="temp"></dd>
+                            <br>
+                            <dd id="tempMin"></dd>
+                            <br>
+                            <dd id="tempMax"></dd>
+                            <br>
+                            <dd id="hum"></dd> 
+                            <br>
+                            <dd id="vent"></dd> 
+                            <br>
+                            <dd id="press"></dd> 
+                        </dl>
+                    </div>
+                </fieldset>
+            
         </div>
-        <div class="previsions">
-            <aside class="bloc1">
-                <h2>bloc2</h2>
-                <input type="button" value="Les précipitation d'aujourd'hui" onclick="button2ClickGet()"/>
-                 <h3>Les précipitation d'aujourd'hui</h3>
-                <dl>
-                    <dt class="date3H"></dt>
-                    <dd class= "pluie"></dd>
-                    <img class="icon"/>
-                </dl>
-                <h2>bloc3</h2>
-                <input type="button" value="Les précipitation de demain" onclick="button3ClickGet()"/>
-                 <h3>Les précipitation de demain</h3>
-                <dl>
-                    <dt class="date4H"></dt>
-                    <dd class= "pluie2"></dd>
-                    <img class="icon2"/>
-                </dl>
-
-                
-            </aside>
-
-
-
-
+        
+            <div class="prevision1">
+                <fieldset class="bloc2">
+                    <legend>Today</legend>
+                    <div class="preci">
+                        <input class="b"type="button" value="Les précipitations d'aujourd'hui" onclick="button2ClickGet()"/>
+                    </div>
+                    <div class="today">
+                        <dl>
+                            <dt class="cityName1"></dt>
+                            <dt class="date3H"></dt>
+                            <img class="icon" alt=""/>
+                            <dt class= "pluie"></dt>
+                            
+                        </dl>
+                    </div>
+                </fieldset>
+            </div>
         </div>
-
-
-
-
-
-    </div>
-
-    
-
-
-
-
-
-    
-    
-
+          <div class="prev23">
+            <div class="prevision2">
+                <fieldset class="bloc3">
+                    <legend>Tomorrow</legend>
+                    <div class="preci">
+                         <input class="b"type="button" value="Les précipitations de demain" onclick="button3ClickGet()"/>
+                     </div>
+                     <div class= "tomorrow">
+                        <dl>
+                            <dt class="cityName2"></dt>
+                            <dt class="date4H"></dt>
+                            <img class="icon2" alt=""/>
+                            <dt class= "pluie2"></dt>
+                            
+                        </dl>
+                     </div>
+                    </fieldset>
+            </div>
+            <div class="prevision3">
+                <fieldset class="bloc4">
+                    <legend>After Tomorow</legend>
+                    <div class="preci">
+                        <input class="b"type="button" value="Les précipitations d'après demain" onclick="button4ClickGet()"/>
+                    </div>
+                    <div class= "totomorrow">
+                        <dl>
+                            <dt class="cityName3" ></dt>
+                            <dt class="date5H"></dt>
+                            <img class="icon3" alt=""/>
+                            <dt class= "pluie3"></dt>
+                            
+                        </dl>
+                    </div>
+                </fieldset>
+                 </div>
+                </div>
+            </div>
+       
+            <script src="script.js"></script>
 </body>
 </html>
