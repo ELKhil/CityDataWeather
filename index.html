@@ -8,20 +8,30 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
     
+    
     <title>Document</title>
 </head>
 <body>
-    <h1>City Data Weather</h1>
+        <header class="tete">
+            <input class="date" id="Aujourdhui" type="date" name="date" value="" readonly>
+            <img class="bb" src="dark.png" type="button" alt="dark" onclick="modeDark()"/>
+            <h1>City Data Weather</h1>
+         </header>
+        
+
      <div class="principale">
          <div class="prev01">
         <div class="prevision0">
-                <fieldset>
+                <fieldset class ="bloc1">
                     <legend>City weather</legend>
-                    <div class="ville">
+                     <div class="ville">
                         <input class="entrer" id= "nomVille" type="text" placeholder="Veuillez entrer le nom de la ville..."/>
                         <input class="b"type="button" value="Go!" onclick="buttonClickGet()"/>
                     </div>
-                    
+                    <div class ="mapInfo">
+                    <div class="map1">
+                        <iframe class="map" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
                     <div class="informations">
                         <dl>
                             <dd class="cityName"></dd>
@@ -39,6 +49,7 @@
                             <dd id="press"></dd> 
                         </dl>
                     </div>
+                </div>
                 </fieldset>
             
         </div>
@@ -50,13 +61,7 @@
                         <input class="b"type="button" value="Les précipitations d'aujourd'hui" onclick="button2ClickGet()"/>
                     </div>
                     <div class="today">
-                        <dl>
-                            <dt class="cityName1"></dt>
-                            <dt class="date3H"></dt>
-                            <img class="icon" alt=""/>
-                            <dt class= "pluie"></dt>
-                            
-                        </dl>
+                        <!-- code creer en javaScript -->
                     </div>
                 </fieldset>
             </div>
@@ -69,13 +74,7 @@
                          <input class="b"type="button" value="Les précipitations de demain" onclick="button3ClickGet()"/>
                      </div>
                      <div class= "tomorrow">
-                        <dl>
-                            <dt class="cityName2"></dt>
-                            <dt class="date4H"></dt>
-                            <img class="icon2" alt=""/>
-                            <dt class= "pluie2"></dt>
-                            
-                        </dl>
+                       <!-- code creer en javaScript -->
                      </div>
                     </fieldset>
             </div>
@@ -86,19 +85,26 @@
                         <input class="b"type="button" value="Les précipitations d'après demain" onclick="button4ClickGet()"/>
                     </div>
                     <div class= "totomorrow">
-                        <dl>
-                            <dt class="cityName3" ></dt>
-                            <dt class="date5H"></dt>
-                            <img class="icon3" alt=""/>
-                            <dt class= "pluie3"></dt>
-                            
-                        </dl>
+                       <!-- code creer en javaScript -->
                     </div>
                 </fieldset>
                  </div>
                 </div>
             </div>
+            <div>
+                    <footer>
+                        
+                        <input class="b" type="button" value="Discover Chuck Norris's joke " onclick="buttonBlague()"/>
+                        <img class="nores"/>
+                        <p class="blague"></p>
+                        
+                    </footer>
+                    
+            </div>
        
             <script src="script.js"></script>
-</body>
+            <script>
+                document.getElementById("Aujourdhui").valueAsDate = new Date();
+            </script>
+    </body> 
 </html>

@@ -7,6 +7,19 @@ body {
   background-color: white;
 }
 
+body.darkMode {
+  background-color: black;
+}
+
+.tete {
+  background-color: white;
+}
+
+.tete.darkMode {
+  background-color: black;
+  color: white;
+}
+
 h1 {
   text-align: center;
   margin-top: 20px;
@@ -17,6 +30,30 @@ h1 {
   font-style: italic;
   line-height: 44px;
   text-align: center;
+}
+
+.darkMode {
+  color: white;
+}
+
+.date {
+  background-color: black;
+  color: yellow;
+  position: absolute;
+  right: 60px;
+  border-radius: 30px;
+  font-size: 15px;
+  padding-right: 2px;
+  padding-left: 20px;
+}
+
+span {
+  background-color: black;
+  color: yellow;
+  position: absolute;
+  top: 20px;
+  border-radius: 5px;
+  left: 20px;
 }
 
 legend {
@@ -37,7 +74,7 @@ legend {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 100px 40px 40px 40px;
+  padding: 40px 40px 40px 40px;
 }
 
 .prev01 {
@@ -60,7 +97,7 @@ legend {
   margin-right: 25px;
 }
 
-.prevision0 fieldset {
+.prevision0 .bloc1 {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -68,8 +105,38 @@ legend {
   background-color: burlywood;
 }
 
-.prevision0 fieldset legend {
+.prevision0 .bloc1 legend {
   background-color: burlywood;
+}
+
+.prevision0 .darkMode {
+  background-color: #837f81;
+}
+
+.prevision0 .darkMode legend {
+  background-color: #837f81;
+}
+
+.prevision0 .map1 {
+  padding-left: 25px;
+  padding-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 30px;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+.prevision0 .mapInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .ville input {
@@ -81,7 +148,7 @@ legend {
   padding-left: 60px;
   width: 350px;
   border-radius: 30px;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 .entrer {
@@ -103,30 +170,62 @@ legend {
   text-align: center;
   font-weight: bold;
   font-style: italic;
-  font-size: 17px;
+  font-size: 15px;
+}
+
+.bb {
+  position: absolute;
+  top: 60px;
+  right: 100px;
+  border-radius: 50%;
+  width: 35px;
+  color: black;
+  margin-left: 80px;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.bb.darkMode {
+  background-color: #d6cece;
+}
+
+.bb:hover {
+  cursor: pointer;
 }
 
 .b:hover {
   cursor: pointer;
-  background-color: brown;
+  background-color: #dd7878;
   color: white;
 }
 
 dl dd {
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-right: 200px;
   padding-top: 2px;
   color: black;
   font-weight: bold;
   font-style: italic;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .informations {
-  padding-left: 400px;
-  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  padding-left: 15px;
+  padding-top: 10px;
   padding-bottom: 40px;
   color: black;
+}
+
+.villeCity, .cityName {
+  color: #752222;
+  font-size: 20px;
 }
 
 .prevision1 {
@@ -139,7 +238,7 @@ dl dd {
           flex-grow: 1;
 }
 
-.prevision1 fieldset {
+.prevision1 .bloc2 {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -147,37 +246,83 @@ dl dd {
   background-color: cornflowerblue;
 }
 
-.prevision1 fieldset legend {
+.prevision1 .bloc2 legend {
   background-color: cornflowerblue;
 }
 
-.prevision1 fieldset .today {
+.prevision1 .bloc2 .today {
   padding-right: 100px;
   padding-top: 7px;
   color: black;
   text-align: center;
   font-weight: bold;
   font-style: italic;
-  font-size: 22px;
+  font-size: 18px;
   display: none;
 }
 
-.prevision1 fieldset .show {
-  display: block;
+.prevision1 .bloc2 .today div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.prevision1 .bloc2 .show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.prevision1 .bloc2 .show div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.prevision1 .bloc2 .show div p {
+  float: left;
+  padding-left: 50px;
+  padding-top: 20px;
+}
+
+.prevision1 .bloc2 .show div img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 50px;
+  padding-top: 7px;
+  height: 41px;
+}
+
+.prevision1 .darkMode {
+  background-color: #f1f191;
+}
+
+.prevision1 .darkMode legend {
+  background-color: #f1f191;
 }
 
 .prevision1 .preci {
-  color: red;
+  color: #dd7878;
   margin-bottom: 15px;
   padding-left: 60px;
   margin-top: 10px;
   margin-right: 50px;
-}
-
-.prevision1 .date3H, .prevision1 .pluie, .prevision1 .icon {
-  margin-left: 80px;
-  margin-top: 15px;
-  margin-bottom: 15px;
 }
 
 .prev23 {
@@ -188,7 +333,8 @@ dl dd {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 100px;
+  margin-top: 40px;
+  margin-bottom: 5px;
 }
 
 .prevision2 {
@@ -202,35 +348,82 @@ dl dd {
   margin-right: 25px;
 }
 
-.prevision2 fieldset {
+.prevision2 .bloc3 {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   border-radius: 30px;
   background-color: gold;
+  padding-bottom: 20px;
 }
 
-.prevision2 fieldset legend {
+.prevision2 .bloc3 legend {
   background-color: gold;
 }
 
-.prevision2 fieldset .tomorrow {
+.prevision2 .bloc3 .tomorrow {
   padding-right: 100px;
   padding-top: 7px;
   color: black;
   text-align: center;
   font-weight: bold;
   font-style: italic;
-  font-size: 22px;
+  font-size: 18px;
   display: none;
 }
 
-.prevision2 fieldset .show {
+.prevision2 .bloc3 .tomorrow div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.prevision2 .bloc3 .show {
   display: block;
 }
 
+.prevision2 .bloc3 .show div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.prevision2 .bloc3 .show div p {
+  float: left;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.prevision2 .bloc3 .show div img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 50px;
+  padding-top: 7px;
+  height: 41px;
+}
+
+.prevision2 .darkMode {
+  background-color: #81a781;
+}
+
+.prevision2 .darkMode legend {
+  background-color: #81a781;
+}
+
 .preci {
-  color: red;
+  color: #dd7878;
   margin-bottom: 15px;
   padding-left: 60px;
   margin-top: 10px;
@@ -253,35 +446,82 @@ dl dd {
           flex-grow: 2;
 }
 
-.prevision3 fieldset {
+.prevision3 .bloc4 {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   border-radius: 30px;
-  background-color: #d9cce6;
+  background-color: #36bfc3;
+  padding-bottom: 20px;
 }
 
-.prevision3 fieldset legend {
-  background-color: #d9cce6;
+.prevision3 .bloc4 legend {
+  background-color: #36bfc3;
 }
 
-.prevision3 fieldset .totomorrow {
+.prevision3 .bloc4 .totomorrow {
   padding-right: 100px;
   padding-top: 7px;
   color: black;
   text-align: center;
   font-weight: bold;
   font-style: italic;
-  font-size: 22px;
+  font-size: 18px;
   display: none;
 }
 
-.prevision3 fieldset .show {
+.prevision3 .bloc4 .totomorrow div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.prevision3 .bloc4 .show {
   display: block;
 }
 
+.prevision3 .bloc4 .show div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.prevision3 .bloc4 .show div p {
+  float: left;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.prevision3 .bloc4 .show div img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 50px;
+  padding-top: 7px;
+  height: 41px;
+}
+
+.prevision3 .darkMode {
+  background-color: #912335;
+}
+
+.prevision3 .darkMode legend {
+  background-color: #912335;
+}
+
 .prevision3 .preci {
-  color: red;
+  color: #dd7878;
   margin-bottom: 15px;
   padding-left: 60px;
   margin-top: 10px;
@@ -292,5 +532,39 @@ dl dd {
   margin-left: 80px;
   margin-top: 15px;
   margin-bottom: 15px;
+}
+
+footer {
+  background-color: black;
+  margin-top: 5px;
+  margin-left: 80px;
+  margin-right: 60px;
+  margin-bottom: 100px;
+  border-radius: 30px;
+}
+
+footer .nores {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 10px;
+  padding-right: 400px;
+  float: right;
+}
+
+footer .blague, footer .cityName1 {
+  color: white;
+  padding-top: 10px;
+  padding-left: 500px;
+  padding-bottom: 20px;
+  font-size: 18px;
+}
+
+footer.darkMode {
+  background-color: #4a57cf;
+}
+
+footer.darkMode .blague {
+  color: white;
 }
 /*# sourceMappingURL=styles.css.map */

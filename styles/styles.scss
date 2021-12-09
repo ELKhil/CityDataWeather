@@ -2,26 +2,78 @@
     margin: 0;
     padding: 0;
 }
+//variables colours
+$noire : black;
+$jaune : yellow;
+$vert : green;
+
+$blanc:white;
+$rouge:rgb(221, 120, 120);
+$citycouleur : rgb(117, 34, 34);
+$field1 : burlywood;
+$field2:cornflowerblue;
+$field3:gold;
+$field4:rgb(54, 191, 195);
+
+
+
 body{
-    background-color:white;
+    background-color:rgb(255, 255, 255);
+    
+}
+body.darkMode{
+    background-color:black;   
+}
+
+
+.tete{
+    background-color: white;
+}
+
+.tete.darkMode{
+    background-color: $noire;
+    color:white;
 }
 h1{
     text-align: center;
     margin-top: 20px;
-    color: black; 
+    color: $noire; 
     font-family: 'Droid serif', serif;
      font-size: 55px; 
      font-weight: 400; 
      font-style: italic; 
      line-height: 44px; 
-     
      text-align: center;
+}
+.darkMode{
+    color: $blanc; 
+}
+
+
+
+.date{
+    background-color:$noire;
+    color: $jaune;
+    position: absolute;
+    right: 60px;
+    border-radius: 30px;
+    font-size: 15px;
+    padding-right: 2px;
+    padding-left: 20px;
+}
+span{
+    background-color:$noire;
+    color:$jaune;
+    position: absolute;
+    top :20px;
+    border-radius: 5px;
+    left :20px;
 }
 legend{
     text-align: center;
     font-weight: bold;
     font-style: italic;
-    color: black;
+    color: $noire;
     font-size: 25px;
     border-radius: 15px;
     
@@ -31,7 +83,8 @@ legend{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 100px 40px 40px 40px;
+    padding: 40px 40px 40px 40px;
+    
     
 }
 .prev01{
@@ -44,25 +97,44 @@ legend{
 .prevision0{
     
     display: flex;
-    color: green;
+    color: $vert;
     flex-grow: 3;
     margin-right: 25px;
     
 
-    fieldset {
+    .bloc1{
         flex-grow: 1;
         border-radius: 30px;
-        background-color: burlywood;
+        background-color: $field1;
+        
         legend{
-            background-color: burlywood;
+            background-color: $field1;
         }
     }
+    .darkMode{
+        background-color: rgb(131, 127, 129);
+        legend{
+            background-color: rgb(131, 127, 129);
+        }
+    }
+.map1{
+    padding-left: 25px;
+    padding-bottom: 10px;
+    display: flex;
+    border-radius: 30px;
+    flex-grow: 2;
     
+}
+.mapInfo{
+    display: flex;
+    flex-direction: row;
+
+}
         
   
 }
 .ville input{
-        color:black;
+        color:$noire;
         margin-bottom: 15px;
         margin-left: 20px;
         margin-top: 20px;
@@ -70,13 +142,13 @@ legend{
         padding-left: 60px;
         width: 350px;
         border-radius: 30px;
-        font-size: 17px;
+        font-size: 15px;
         
         }
 .entrer{
     border-radius: 30px;
     width: 300px;
-    color: black;
+    color: $noire;
     margin-left: 80px;
     text-align: center;
     font-weight: bold;
@@ -86,88 +158,151 @@ legend{
 .b{
     border-radius: 30px;
     width: 400px;
-    color: black;
+    color: $noire;
     margin-left: 80px;
     text-align: center;
     font-weight: bold;
     font-style: italic;
-    font-size: 17px;
+    font-size: 15px;
+}
+.bb{
+    position: absolute;
+    top:60px;
+    right:100px;
+    border-radius: 50%;
+    
+    width: 35px;
+    color: $noire;
+    margin-left: 80px;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 15px;
+}
+.bb.darkMode{
+    background-color: rgb(214, 206, 206);
+}
+.bb:hover{
+    cursor: pointer;
+    
+    
 }
 .b:hover{
              cursor: pointer;
-             background-color: brown;
-             color:white;
+             background-color: $rouge;
+             color:$blanc;
             
             }
 
  dl dd{
-            padding-left: 100px;
-            padding-right: 100px;
+            
+            padding-right: 200px;
             padding-top: 2px;
-            color: black;
+            color: $noire;
             
             font-weight: bold;
             font-style: italic;
-            font-size: 22px;
+            font-size: 18px;
         }
 
 .informations{
-     padding-left: 400px;
-     padding-top: 40px;
+     display:flex;
+     flex-grow: 2;
+     padding-left: 15px;
+     padding-top: 10px;
      padding-bottom: 40px;
-     color: black;
+     color:$noire;
          
 
  }
     
-
+ .villeCity,.cityName{
+            
+    color: $citycouleur;
+    font-size: 20px;
+}
 .prevision1{
     display: flex;
     color:blue;
    
     flex-grow: 1;
-    fieldset {
+    .bloc2{
         flex-grow: 1;
         border-radius: 30px; 
-        background-color: cornflowerblue;
+        background-color: $field2;
         legend{
-            background-color: cornflowerblue;
+            background-color: $field2;
         }
         .today{
                     padding-right: 100px;
                     padding-top: 7px;
-                    color: black;
+                    
+                    color:$noire;
                     text-align: center;
                     font-weight: bold;
                     font-style: italic;
-                    font-size: 22px;
+                    font-size: 18px;
                     display: none;
+                    div{
+                        display: flex;
+                        flex-direction: row;
+                        
+                    }
+                   
         }
+       
         .show{
-            display: block;
-        }
+            display: flex;
+            flex-direction: column;
+            
+            div{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        
+                        p{
+                            float: left;
+                            padding-left: 50px;
+                            padding-top: 20px;
+                            
+                         }
+                         img{
+                            display : flex;
+                            padding-left: 50px;
+                            padding-top: 7px;
+                            height: 41px;
+                         }
+
+                    }
+        } 
     }
+    .darkMode{
+        background-color: rgb(241, 241, 145);
+        legend{
+            background-color: rgb(241, 241, 145);
+        }
+        
+    }
+   
     
     .preci{
-        color:red;
+        color:$rouge;
         margin-bottom: 15px;
         padding-left: 60px;
         margin-top: 10px;
         margin-right: 50px;
         
     }
-    .date3H,.pluie,.icon{
-        margin-left: 80px;
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
 
+    
+  
 }
 .prev23{
     display: flex;
     width: 100%;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 40px;
+    margin-bottom: 5px;
 }
 .prevision2{
     display: flex;
@@ -177,33 +312,65 @@ legend{
     margin-right: 25px;
     
     
-    fieldset {
+    .bloc3 {
         flex-grow: 1;
         border-radius: 30px;
         background-color:gold;
+        padding-bottom: 20px;
         legend{
             background-color: gold;
         }
         .tomorrow{
             padding-right: 100px;
             padding-top: 7px;
-            color: black;
+            color:$noire;
             text-align: center;
             font-weight: bold;
             font-style: italic;
-            font-size: 22px;
+            font-size: 18px;
             display: none;
+
+            div{
+                display: flex;
+                flex-direction: row;
+            }
         }
         .show{
             display: block;
+            div{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between; 
+                
+                p{
+                    float: left;
+                    padding-left: 20px;
+                    padding-top: 20px;
+                 } 
+                 img{
+                        display : flex;
+                        padding-left: 50px;
+                        padding-top: 7px;
+                        height: 41px;
+                     }
+
+                }
         }
       
     }
+    .darkMode{
+        background-color: rgb(129, 167, 129);
+        legend{
+            background-color: rgb(129, 167, 129);
+        }
+    }
+   
+     
         
 }
    
     .preci{
-        color:red;
+        color:$rouge;
         margin-bottom: 15px;
         padding-left: 60px;
         margin-top: 10px;
@@ -222,31 +389,60 @@ legend{
    
     flex-grow: 2;
 
-    fieldset {
+    .bloc4 {
         flex-grow: 1;
         border-radius: 30px; 
-        background-color: rgb(217, 204, 230);
+        background-color: $field4;
+        padding-bottom: 20px;
         legend{
-            background-color: rgb(217, 204, 230);
+            background-color: $field4;
         }
         .totomorrow{
             padding-right: 100px;
             padding-top: 7px;
-            color: black;
+            color: $noire;
             text-align: center;
             font-weight: bold;
             font-style: italic;
-            font-size: 22px;
+            font-size: 18px;
             display: none;
+            div{
+                display: flex;
+                flex-direction: row;
+            }
         }
         .show{
             display: block;
+            div{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between; 
+                
+                p{
+                    float: left;
+                    padding-left: 20px;
+                    padding-top: 20px;
+                 } 
+                 img{
+                        display : flex;
+                        padding-left: 50px;
+                        padding-top: 7px;
+                        height: 41px;
+                     }
+
+                }
+        }
+    }
+    .darkMode{
+        background-color: rgb(145, 35, 53);
+        legend{
+            background-color: rgb(145, 35, 53);
         }
     }
     
     
     .preci{
-        color:red;
+        color:$rouge;
         margin-bottom: 15px;
         padding-left: 60px;
         margin-top: 10px;
@@ -258,5 +454,39 @@ legend{
         margin-top: 15px;
         margin-bottom: 15px;
     }
+    
    
 }
+footer{
+    background-color:$noire;
+    margin-top: 5px;
+    margin-left: 80px;
+    margin-right: 60px;
+    margin-bottom: 100px;
+    border-radius: 30px;
+    .nores{
+        display:flex;
+        padding-top: 10px;
+        padding-right: 400px;
+        float: right;
+        
+    }
+    .blague,.cityName1{
+        color:$blanc;
+        padding-top: 10px;
+        padding-left: 500px;
+        padding-bottom: 20px;
+        font-size: 18px;
+        
+        
+    }
+    
+}
+footer.darkMode{
+    background-color: rgb(74, 87, 207);
+        .blague{
+            color: white;
+
+    }
+}
+
